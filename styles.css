@@ -1,0 +1,23 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 2rem;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+h1, h2 {
+  color: #2a7ae2;
+}
+
+nav a {
+  margin-right: 1em;
+  text-decoration: none;
+  color: #444;
+}
+
+.question {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #fff;
+  border-left: 4px solid #2a7ae2;
+}
