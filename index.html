@@ -1,4 +1,26 @@
 <!DOCTYPE html>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore-compat.js"></script>
+
+<script>
+  // 🔧 Replace with YOUR config from Firebase console
+  const firebaseConfig = {
+    apiKey: "AIzaSyBTd7XHWL76jNQhZ3btvlow-dQfEoR9yJs",
+    authDomain: "mandarincourse-1c553.firebaseapp.com",
+    projectId: "mandarincourse-1c553",
+    storageBucket: "mandarincourse-1c553.firebasestorage.app",
+    messagingSenderId: "573086580797",
+    appId: "1:573086580797:web:cb3aa0a91d9f8164c2ea54",
+    measurementId: "G-T2K8QDHFNQ"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+</script>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
