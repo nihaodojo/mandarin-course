@@ -43,3 +43,23 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
+
+function markLessonComplete(lessonId, score = null) {
+  const user = auth.currentUser;
+  if (!user) {
+    alert("Please log in");
+    return;
+  }
+
+  db.collection("progress").doc(user.uid).set({
+    [lessonId]: {
+      completed: true,
+      score: score,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    }
+  }, { merge: true }).then(() => {
+    console.log(`Progress for ${lessonId} saved`);
+  }).catch(error => {
+    console.error("Error saving progress:", error);
+  });
+}
